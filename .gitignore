@@ -1,0 +1,60 @@
+node_modules
+dist
+.env
+
+# compiled output
+gestion-conge/dist
+gestion-conge//node_modules
+gestion-conge//build
+
+# Logs
+gestion-conge/logs
+gestion-conge/*.log
+gestion-conge/npm-debug.log*
+gestion-conge/pnpm-debug.log*
+gestion-conge/yarn-debug.log*
+gestion-conge/yarn-error.log*
+gestion-conge/lerna-debug.log*
+
+# OS
+gestion-conge/.DS_Store
+
+# Tests
+gestion-conge//coverage
+gestion-conge//.nyc_output
+
+# IDEs and editors
+gestion-conge/.idea
+gestion-conge/.project
+gestion-conge/.classpath
+gestion-conge/.c9/
+gestion-conge/*.launch
+gestion-conge/.settings/
+gestion-conge/*.sublime-workspace
+
+# IDE - VSCode
+gestion-conge/.vscode/*
+gestion-conge/!.vscode/settings.json
+gestion-conge/!.vscode/tasks.json
+gestion-conge/!.vscode/launch.json
+gestion-conge/!.vscode/extensions.json
+
+# dotenv environment variable files
+gestion-conge/.env
+gestion-conge/.env.development.local
+gestion-conge/.env.test.local
+gestion-conge/.env.production.local
+gestion-conge/.env.local
+
+# temp directory
+gestion-conge/.temp
+gestion-conge/.tmp
+
+# Runtime data
+gestion-conge/pids
+gestion-conge/*.pid
+gestion-conge/*.seed
+gestion-conge/*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+gestion-conge/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
