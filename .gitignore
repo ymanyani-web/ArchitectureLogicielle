@@ -3,58 +3,58 @@ dist
 .env
 
 # compiled output
-gestion-conge/dist
-gestion-conge//node_modules
-gestion-conge//build
+leave-management/dist
+leave-management//node_modules
+leave-management//build
 
 # Logs
-gestion-conge/logs
-gestion-conge/*.log
-gestion-conge/npm-debug.log*
-gestion-conge/pnpm-debug.log*
-gestion-conge/yarn-debug.log*
-gestion-conge/yarn-error.log*
-gestion-conge/lerna-debug.log*
+leave-management/logs
+leave-management/*.log
+leave-management/npm-debug.log*
+leave-management/pnpm-debug.log*
+leave-management/yarn-debug.log*
+leave-management/yarn-error.log*
+leave-management/lerna-debug.log*
 
 # OS
-gestion-conge/.DS_Store
+leave-management/.DS_Store
 
 # Tests
-gestion-conge//coverage
-gestion-conge//.nyc_output
+leave-management//coverage
+leave-management//.nyc_output
 
 # IDEs and editors
-gestion-conge/.idea
-gestion-conge/.project
-gestion-conge/.classpath
-gestion-conge/.c9/
-gestion-conge/*.launch
-gestion-conge/.settings/
-gestion-conge/*.sublime-workspace
+leave-management/.idea
+leave-management/.project
+leave-management/.classpath
+leave-management/.c9/
+leave-management/*.launch
+leave-management/.settings/
+leave-management/*.sublime-workspace
 
 # IDE - VSCode
-gestion-conge/.vscode/*
-gestion-conge/!.vscode/settings.json
-gestion-conge/!.vscode/tasks.json
-gestion-conge/!.vscode/launch.json
-gestion-conge/!.vscode/extensions.json
+leave-management/.vscode/*
+leave-management/!.vscode/settings.json
+leave-management/!.vscode/tasks.json
+leave-management/!.vscode/launch.json
+leave-management/!.vscode/extensions.json
 
 # dotenv environment variable files
-gestion-conge/.env
-gestion-conge/.env.development.local
-gestion-conge/.env.test.local
-gestion-conge/.env.production.local
-gestion-conge/.env.local
+leave-management/.env
+leave-management/.env.development.local
+leave-management/.env.test.local
+leave-management/.env.production.local
+leave-management/.env.local
 
 # temp directory
-gestion-conge/.temp
-gestion-conge/.tmp
+leave-management/.temp
+leave-management/.tmp
 
 # Runtime data
-gestion-conge/pids
-gestion-conge/*.pid
-gestion-conge/*.seed
-gestion-conge/*.pid.lock
+leave-management/pids
+leave-management/*.pid
+leave-management/*.seed
+leave-management/*.pid.lock
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
-gestion-conge/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+leave-management/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
