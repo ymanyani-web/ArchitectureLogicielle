@@ -2,10 +2,12 @@ node_modules
 dist
 .env
 
+leave-management2/
+leave-management2/*
 # compiled output
 leave-management/dist
-leave-management//node_modules
-leave-management//build
+leave-management/node_modules
+leave-management/build
 
 # Logs
 leave-management/logs
@@ -20,8 +22,8 @@ leave-management/lerna-debug.log*
 leave-management/.DS_Store
 
 # Tests
-leave-management//coverage
-leave-management//.nyc_output
+leave-management/coverage
+leave-management/.nyc_output
 
 # IDEs and editors
 leave-management/.idea

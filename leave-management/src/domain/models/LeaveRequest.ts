@@ -3,7 +3,7 @@ import { sequelize } from "../../infrastructure/database/config";
 
 export class LeaveRequest extends Model {
   public id!: number;
-  public employeeId!: string;
+  public employeeId!: number;
   public startDate!: Date;
   public endDate!: Date;
   public status!: "PENDING" | "APPROVED" | "REJECTED";
@@ -12,10 +12,10 @@ export class LeaveRequest extends Model {
 LeaveRequest.init(
   {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
-    employeeId: { type: DataTypes.STRING, allowNull: false },
+    employeeId: { type: DataTypes.INTEGER, allowNull: false },
     startDate: { type: DataTypes.DATE, allowNull: false },
     endDate: { type: DataTypes.DATE, allowNull: false },
     status: { type: DataTypes.STRING, defaultValue: "PENDING" },
   },
-  { sequelize, modelName: "LeaveRequests" }
+  { sequelize, modelName: "leave_request" }
 );
