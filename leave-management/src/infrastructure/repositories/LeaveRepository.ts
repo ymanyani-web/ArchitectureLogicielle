@@ -2,19 +2,25 @@ import { LeaveRequest } from "../../domain/models/LeaveRequest";
 import { ILeaveRepository } from "../../application/ports/ILeaveRepository";
 
 export class LeaveRepository implements ILeaveRepository {
-  async requestLeave(employeeId: number, startDate: Date, endDate: Date) {
+  async createLeaveRequest(employeeId: number, startDate: Date, endDate: Date): Promise<LeaveRequest> {
     return await LeaveRequest.create({ employeeId, startDate, endDate, status: "PENDING" });
   }
 
-  async getUserLeaves(userId: number) {
-    return await LeaveRequest.findAll({ where: { employeeId: userId } });
+  async getLeavesByEmployeeId(employeeId: number): Promise<LeaveRequest[]> {
+    return await LeaveRequest.findAll({ where: { employeeId } });
   }
 
-  async updateLeaveStatus(id: number, status: "PENDING" | "APPROVED" | "REJECTED") {
-    const leaveRequest = await LeaveRequest.findByPk(id);
-    if (!leaveRequest) throw new Error("Demande introuvable");
-    leaveRequest.status = status;
-    await leaveRequest.save();
-    return leaveRequest;
+  async updateLeaveStatus(id: number, status: "APPROVED" | "REJECTED"): Promise<LeaveRequest> {
+    const leave = await LeaveRequest.findByPk(id);
+    if (!leave) {
+      throw new Error("Demande de congé non trouvée.");
+    }
+    leave.status = status;
+    await leave.save();
+    return leave;
+  }
+
+  async getAllLeaveRequests(): Promise<LeaveRequest[]> {
+    return await LeaveRequest.findAll(); // Fetch all leave requests
   }
 }

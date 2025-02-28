@@ -6,7 +6,6 @@ const router = Router();
 const userRepository = new UserRepository();
 const authService = new AuthService(userRepository);
 
-// ✅ Register Route
 router.post("/register", async (req: Request, res: Response) => {
   try {
     const { username, password, role } = req.body;
@@ -17,7 +16,6 @@ router.post("/register", async (req: Request, res: Response) => {
   }
 });
 
-// ✅ Login Route
 router.post("/login", async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;

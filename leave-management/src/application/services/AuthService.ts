@@ -12,13 +12,11 @@ export class AuthService {
     this.userRepository = userRepository;
   }
 
-  // ✅ Register a new user
   async register(username: string, password: string, role: "user" | "admin"): Promise<User> {
     const hashedPassword = await bcrypt.hash(password, 10);
     return this.userRepository.createUser(username, hashedPassword, role);
   }
 
-  // ✅ Login and return JWT token
   async login(username: string, password: string): Promise<{ token: string; user: User }> {
     const user = await this.userRepository.findByUsername(username);
     if (!user) {
