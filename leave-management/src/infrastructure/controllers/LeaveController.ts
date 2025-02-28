@@ -34,4 +34,16 @@ router.put("/leave-requests/:id", authMiddleware, adminMiddleware, async (req: A
   }
 });
 
+router.post("/leave-request", authMiddleware, async (req: AuthRequest, res: Response) => {
+  try {
+    const userId = req.user!.id;
+    const { startDate, endDate } = req.body;
+    const leave = await leaveService.requestLeave(userId, new Date(startDate), new Date(endDate));
+    res.status(201).json(leave);
+  } catch (error) {
+    res.status(500).json({ error: (error as Error).message });
+  }
+});
+
+
 export default router;
